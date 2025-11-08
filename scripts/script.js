@@ -86,6 +86,7 @@ document.addEventListener('keydown', (e) => {
 // Open works modal with details
 // Simplified Open works modal with details
 // Updated Open works modal with details (removed download option)
+// Open works modal with details - NO DOWNLOAD OPTION
 function openCertPage(certType) {
     const worksData = {
         'conference': {
@@ -188,7 +189,7 @@ function openCertPage(certType) {
     if (work) {
         const modalBody = document.getElementById('modal-body');
 
-        // Build certificate section HTML if certificate exists (removed download button)
+        // Certificate section - ONLY OPEN IN NEW TAB, NO DOWNLOAD
         const certificateSection = work.certificate ? `
             <div class="certificate-section">
                 <h3>Certificate</h3>
@@ -201,7 +202,7 @@ function openCertPage(certType) {
                     <div class="certificate-actions">
                         <a href="${work.certificate}" target="_blank" class="certificate-link">
                             <i class="fas fa-external-link-alt"></i>
-                            Open in New Tab
+                            View Full Certificate
                         </a>
                     </div>
                 </div>
@@ -239,12 +240,9 @@ function openCertPage(certType) {
         `;
 
         modal.style.display = 'block';
-
-        // Scroll to top of modal
         modal.querySelector('.modal-content').scrollTop = 0;
     }
 }
-
 // Contact Form Submission
 const contactForm = document.getElementById('contactForm');
 
