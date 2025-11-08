@@ -244,54 +244,52 @@ function openCertPage(certType) {
     }
 }
 // Contact Form Submission
-/*
+// Contact Form Submission that works with Formspree
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        try {
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
 
-        // Simple validation
-        if (name && email && subject && message) {
-            try {
-                // Show loading state
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Submit to Formspree using fetch
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-                // For now, we'll use a simple success message
-                // In production, integrate with EmailJS or backend service
-                setTimeout(() => {
-                    showNotification('Thank you for your message! I will get back to you soon.', 'success');
-                    contactForm.reset();
-
-                    // Reset button state
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                }, 1000);
-
-            } catch (error) {
-                console.error('Error sending message:', error);
-                showNotification('Sorry, there was an error sending your message. Please try again or email me directly.', 'error');
-
-                // Reset button state
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
+            if (response.ok) {
+                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                contactForm.reset();
+            } else {
+                // If Formspree fails, show error
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Form submission failed');
             }
-        } else {
-            showNotification('Please fill in all fields.', 'error');
+
+        } catch (error) {
+            console.error('Error:', error);
+            showNotification('Failed to send message. Please email me directly at angelmary3505@gmail.com', 'error');
+        } finally {
+            // Reset button state
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
         }
     });
 }
-*/
 
 // Notification function
 function showNotification(message, type) {
@@ -398,5 +396,6 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', () => {
     // Add any initialization code here
 });
+
 
 
