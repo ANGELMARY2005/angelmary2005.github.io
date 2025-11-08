@@ -1,5 +1,3 @@
-
-
 // Mobile Navigation Toggle
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -86,6 +84,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Open works modal with details
+// Simplified Open works modal with details
 function openCertPage(certType) {
     const worksData = {
         'conference': {
@@ -397,15 +396,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    const rate = scrolled * 0.5;
-
-    hero.style.transform = `translateY(${rate}px)`;
-});
 
 // Initialize all animations when page loads
 document.addEventListener('DOMContentLoaded', () => {
