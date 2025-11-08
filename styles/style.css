@@ -1910,3 +1910,169 @@ ul {
         order: 0;
     }
 }
+/* ===== MOBILE RESPONSIVENESS - HIGH SPECIFICITY ===== */
+@media only screen and (max-width: 768px) {
+    /* 1. Force photo to appear first on mobile */
+    .hero-container {
+        flex-direction: column-reverse !important;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-image {
+        order: -1 !important;
+    }
+    
+    .profile-photo {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    
+    /* 2. Force 2 columns for projects and certifications */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+    
+    .certs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+    
+    /* 3. Force smaller text sizes */
+    body {
+        font-size: 14px !important;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    .hero-text p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .section-title {
+        font-size: 2rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .highlight-text {
+        font-size: 1.1rem !important;
+    }
+    
+    .project-card h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .project-description {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .cert-card h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    .cert-card p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Adjust spacing */
+    .hero {
+        padding: 120px 0 60px !important;
+        min-height: auto !important;
+    }
+    
+    .about, .projects, .certifications, .contact {
+        padding: 80px 0 !important;
+    }
+    
+    /* Adjust buttons */
+    .btn {
+        padding: 12px 24px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 250px !important;
+        justify-content: center;
+    }
+    
+    /* Contact badges */
+    .contact-badge {
+        font-size: 0.9rem !important;
+        padding: 10px 15px !important;
+    }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 480px) {
+    .projects-grid,
+    .certs-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.2rem !important;
+    }
+    
+    .profile-photo {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .project-card,
+    .cert-card {
+        padding: 2rem 1.5rem !important;
+    }
+}
+
+/* Ensure desktop stays the same */
+@media only screen and (min-width: 769px) {
+    .hero-container {
+        flex-direction: row !important;
+    }
+    
+    .hero-image {
+        order: 0 !important;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .certs-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
