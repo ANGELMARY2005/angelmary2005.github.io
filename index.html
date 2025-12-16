@@ -110,76 +110,81 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title fade-in">Projects & Research</h2>
-            <p class="section-subtitle fade-in">Exploring innovative solutions through technology and research</p>
+            <h2 class="section-title fade-in">My Projects</h2>
+            <p class="section-subtitle fade-in">Click on any project to view details</p>
 
-            <div class="projects-grid">
-                <div class="project-card scale-in">
-                    <div class="project-icon">
-                        <i class="fas fa-robot"></i>
+            <div class="projects-horizontal-scroll">
+                <div class="projects-scroll-container">
+                    <div class="project-card-mini scale-in" onclick="showProjectDetails('credit-card-fraud')">
+                        <div class="project-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Credit Card Fraud Detection System</h3>
+                        <p>ML system to detect fraudulent transactions</p>
+                        <div class="project-click-hint">Click for details</div>
                     </div>
-                    <h3>Automated Doubt Resolution System</h3>
-                    <p class="project-date">2024 - Present</p>
-                    <p class="project-description">An AI-powered system that provides accurate and timely resolution to
-                        student doubts using NLP, BERT, and semantic search techniques. This research project aims to
-                        revolutionize educational support systems.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">BERT</span>
-                        <span class="tech-tag">Machine Learning</span>
+
+                    <div class="project-card-mini scale-in" onclick="showProjectDetails('customer-behavior')">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>Customer Shopping Behavio Analysisr</h3>
+                        <p>Analysis of customer purchase patterns</p>
+                        <div class="project-click-hint">Click for details</div>
                     </div>
-                    <div class="project-links">
-                        <a href="assets/research.pdf" class="project-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Research Paper
-                        </a>
-                        <a href="assets/output.png" class="project-link">
-                            <i class="fas fa-eye"></i> View Model
-                        </a>
+
+                    <div class="project-card-mini scale-in" onclick="showProjectDetails('doubt-resolution')">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Automated Doubt Resolution System </h3>
+                        <p>AI-powered system for student queries</p>
+                        <div class="project-click-hint">Click for details</div>
+                    </div>
+
+                    <div class="project-card-mini scale-in" onclick="showProjectDetails('puzzle-paradox')">
+                        <div class="project-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Puzzle Paradox</h3>
+                        <p>Interactive puzzle game with AI opponent</p>
+                        <div class="project-click-hint">Click for details</div>
+                    </div>
+
+                    <div class="project-card-mini scale-in" onclick="showProjectDetails('gesture-website')">
+                        <div class="project-icon">
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                        <h3>Gesture Controlled Website</h3>
+                        <p>Web interface controlled through hand gestures</p>
+                        <div class="project-click-hint">Click for details</div>
+                    </div>
+
+                    <div class="project-card-mini scale-in" onclick="showProjectDetails('data-explorer')">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data Explorer</h3>
+                        <p>Interactive data visualization tool</p>
+                        <div class="project-click-hint">Click for details</div>
                     </div>
                 </div>
-
-                <div class="project-card scale-in">
-                    <div class="project-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Data Science Internship Project</h3>
-                    <p class="project-date">2025</p>
-                    <p class="project-description">Developed predictive models using Python, cleaned datasets with SQL,
-                        created interactive dashboards in Tableau/Power BI, and applied NLP for sentiment analysis in a
-                        real-world business context.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Tableau</span>
-                        <span class="tech-tag">NLP</span>
-                    </div>
-                </div>
-
-                <div class="project-card scale-in">
-                    <div class="project-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Project Aksharam</h3>
-                    <p class="project-date">2024</p>
-                    <p class="project-description">A collaborative volunteering initiative
-                        aimed at empowering students from diverse schools through innovative teaching
-                        approaches, with a primary focus on enhancing educational accessibility
-                        and fostering engaging learning experiences for underprivileged communities.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Teaching</span>
-                        <span class="tech-tag">Volunteering</span>
-                        <span class="tech-tag">Community Service</span>
-                    </div>
+                <div class="scroll-arrows">
+                    <button class="scroll-arrow left-arrow" onclick="scrollProjects(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="scroll-arrow right-arrow" onclick="scrollProjects(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- Experience & Certifications Section -->
     <section id="certifications" class="certifications">
         <div class="container">
-            <h2 class="section-title fade-in">My works</h2>
+            <h2 class="section-title fade-in">Experience & Certifications</h2>
             <p class="section-subtitle fade-in">Professional development and academic accomplishments</p>
 
             <div class="certs-grid">
@@ -188,7 +193,7 @@
                         <i class="fas fa-microphone"></i>
                     </div>
                     <h3>ICAECT conference</h3>
-                    <p>International Conference on advances in emerging coumputing technologies</p>
+                    <p>International Conference on advances in emerging computing technologies</p>
                     <div class="cert-badge">Explore</div>
                 </div>
 
@@ -219,21 +224,48 @@
                     <div class="cert-badge">Explore</div>
                 </div>
 
-                <div class="cert-card scale-in" onclick="openCertPage('data-science')">
+                <div class="cert-card scale-in" onclick="openCertPage('gen-ai-analytics')">
                     <div class="cert-icon">
-                        <i class="fas fa-database"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Data Science Internship</h3>
-                    <p>Infopark, Koratty - Predictive modeling and analytics</p>
+                    <h3>Gen AI Analytics Simulation</h3>
+                    <p>Generative AI powered data analytics simulation project</p>
                     <div class="cert-badge">Explore</div>
                 </div>
 
-                <div class="cert-card scale-in" onclick="openCertPage('personal-tutor')">
+                <div class="cert-card scale-in" onclick="openCertPage('data-visualization')">
                     <div class="cert-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
+                        <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3>Personal Tutor & Mentor</h3>
-                    <p>Academic mentoring and personalized educational guidance</p>
+                    <h3>Data Visualization</h3>
+                    <p>Advanced data visualization techniques and dashboard creation</p>
+                    <div class="cert-badge">Explore</div>
+                </div>
+
+                <div class="cert-card scale-in" onclick="openCertPage('azure-cognitive')">
+                    <div class="cert-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Azure Cognitive Services</h3>
+                    <p>Computer application development with Azure AI services</p>
+                    <div class="cert-badge">Explore</div>
+                </div>
+
+                <div class="cert-card scale-in" onclick="openCertPage('ai-conference')">
+                    <div class="cert-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Publication of Research paper</h3>
+                    <p>International Conference on Recent Trends in Artificial Intelligence</p>
+                    <div class="cert-badge">Explore</div>
+                </div>
+
+                <div class="cert-card scale-in" onclick="openCertPage('wordpress-website')">
+                    <div class="cert-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h3>WordPress Website</h3>
+                    <p>Built a free website using WordPress CMS platform</p>
                     <div class="cert-badge">Explore</div>
                 </div>
             </div>
@@ -294,23 +326,24 @@
 
                 <div class="contact-form slide-in-right">
                     <h3>Send Me a Message</h3>
-                   <form id="contactForm" action="https://formspree.io/f/mkgkwrvz" method="POST">
-    <div class="form-group">
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-    </div>
-    <div class="form-group">
-        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-    </div>
-    <div class="form-group">
-        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">
-        <i class="fas fa-paper-plane"></i> Send Message
-    </button>
-</form>
+                    <form id="contactForm" action="https://formspree.io/f/mkgkwrvz" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -366,7 +399,3 @@
 </body>
 
 </html>
-
-
-
-
